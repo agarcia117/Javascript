@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7D-F Exercise</title>
+</head>
+<body>
+  
+  <script>
+    function convertToFaranheit(celcius){
+      const faranheit = (celcius * 9 / 5) + 32;
+      return faranheit;
+    }
+    console.log(convertToFaranheit(25));
+
+    function convertToCelcius(faranheit){
+      const celcius = (faranheit - 32) * 5 / 9;
+      return celcius;
+    }
+    console.log(convertToCelcius(86));
+
+    function convertTemperature(degrees, unit){
+      let result = '';
+      if(unit === 'C'){
+        const faranheit = (degrees * 9 / 5) + 32;
+        result = faranheit + 'F';
+      } else if (unit === 'F'){
+        const celcius = (degrees - 32) * 5 / 9;
+        result = celcius + 'C';
+      }
+      return result;
+    }
+    
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'F'));
+    
+  </script>
+</body>
+</html>
