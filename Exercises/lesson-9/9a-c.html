@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9A-C Practice</title>
+</head>
+<body>
+  <!-- 9A-B practice -->
+  <button class="a-button">9a</button>
+  <button class="b-button">9b</button>
+  <p style="margin-bottom: 100px;"></p>
+
+
+  <!-- 9C practice -->
+  <button class="heads-button" onclick="
+    changeCoinText('heads');
+  ">heads</button>
+  <button class="tails-button" onclick="
+    changeCoinText('tails');
+  ">tails</button>
+  <p class="coin-info"></p>
+
+  <script>
+    // 9A-B practice
+    const buttonElement = document.querySelector('button');
+    console.log(buttonElement.innerHTML);
+
+    const buttonBElement = document.querySelector('.b-button');
+    buttonBElement.innerHTML = '9b done!'
+
+
+  // 9C practice
+    function changeCoinText(choice) {
+      document.querySelector('.coin-info').innerHTML = `You chose: ${choice}`;
+    }
+  </script>
+</body>
+</html>
