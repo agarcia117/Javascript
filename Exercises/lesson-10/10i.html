@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10I Practice</title>
+    <link rel="stylesheet" href="styles/10i.css">
+  </head>
+  <body>
+    <p class="display-calculations"></p>
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      " class="main-numpad-button">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      " class="main-numpad-button">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      " class="main-numpad-button">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      " class="side-numpad-button">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      " class="main-numpad-button">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      " class="main-numpad-button">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      " class="main-numpad-button">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      " class="side-numpad-button">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      " class="main-numpad-button">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      " class="main-numpad-button">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      " class="main-numpad-button">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      " class="side-numpad-button">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      " class="main-numpad-button">0</button>
+
+      <button onclick="
+        updateCalculation('.');
+      " class="main-numpad-button">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        document.querySelector('.display-calculations').innerHTML = calculation;
+        console.log(calculation);
+      " class="main-numpad-button">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      " class="side-numpad-button">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        document.querySelector('.display-calculations').innerHTML = calculation;
+      " class="main-numpad-button clear-button">Clear</button>
+    </p>
+
+    <script src="scripts/10i.js"></script>
+  </body>
+</html>
