@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12A-I Practice</title>
+</head>
+<body>
+  <button class="start-button">Start</button>
+  <p></p>
+  <button class="add-to-cart-button">Add to Cart</button>
+  <p class="add-to-cart-text"></p>
+  <p></p>
+  <button class="add-messages-button">Add</button>
+  <button class="remove-messages-button">Remove</button>
+  <script>
+    //12A
+    let add = function () {
+      console.log(2 + 3);
+    };
+    add();
+    add();
+
+    //12B
+    function runTwice(fun) {
+      fun();
+      fun();
+    };
+    runTwice(function () {
+      console.log('12b');
+    });
+    runTwice(add);
+
+    //12C-D
+    const buttonElement = document.querySelector('.start-button');
+    buttonElement.addEventListener('click', function () {
+      buttonElement.innerHTML = 'Loading...';
+      setTimeout(() => {
+        buttonElement.innerHTML = 'Finished!';
+      }, 1000);
+    });
+
+    //12E-F
+    const buttonCartElement = document.querySelector('.add-to-cart-button');
+    let timeout;
+    buttonCartElement.addEventListener('click', function () {
+      clearTimeout(timeout);
+      const textCartElement = document.querySelector('.add-to-cart-text');
+      textCartElement.innerHTML = 'Added';
+      timeout = setTimeout(() => {
+        textCartElement.innerHTML = '';
+      }, 2000);
+    });
+
+    //12G
+    let num = 0;
+    let messages = 2;
+    setInterval(() => {
+      if(messages === 0){
+        document.title = 'App';
+      }else if(num % 2 === 0) {
+        document.title = 'App';
+        num++;
+      } else {
+        document.title = `(${messages}) New Messages`;
+        num--;
+      }
+    }, 1000);
+
+    //12H-I
+    const buttonAddMessagesElement = document.querySelector('.add-messages-button');
+    buttonAddMessagesElement.addEventListener('click', () => {
+      messages++;
+    });
+
+    const buttonRemoveMessagesElement = document.querySelector('.remove-messages-button');
+    buttonRemoveMessagesElement.addEventListener('click', () => {
+      if (messages > 0){
+        messages--;
+      }
+    });
+
+  </script>
+</body>
+</html>
