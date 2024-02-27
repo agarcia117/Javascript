@@ -33,7 +33,7 @@
 
     //12C-D
     const buttonElement = document.querySelector('.start-button');
-    buttonElement.addEventListener('click', function () {
+    buttonElement.addEventListener('click', () => {
       buttonElement.innerHTML = 'Loading...';
       setTimeout(() => {
         buttonElement.innerHTML = 'Finished!';
@@ -43,7 +43,7 @@
     //12E-F
     const buttonCartElement = document.querySelector('.add-to-cart-button');
     let timeout;
-    buttonCartElement.addEventListener('click', function () {
+    buttonCartElement.addEventListener('click', () => {
       clearTimeout(timeout);
       const textCartElement = document.querySelector('.add-to-cart-text');
       textCartElement.innerHTML = 'Added';
